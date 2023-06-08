@@ -1,0 +1,434 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+@media screen and (max-width: 1500px) {
+  #navbar-pinterest {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    z-index: 5;
+  }
+}
+
+#mensaje {
+  top: 30px;
+  left: -180px;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.search-container {
+  position: relative;
+  display: inline-block;
+}
+
+.finder::placeholder {
+  color: black;
+}
+
+
+.finder {
+  background-color: #BBB3B1;
+  width: 750px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5px 10px 5px 35px;
+  /* Ajusta los valores de padding según tus necesidades */
+}
+
+.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #333;
+}
+
+#notifications,
+#message,
+#profile-img {
+  width: 65px;
+  height: 48px;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s;
+  color: black;
+}
+
+#notifications:hover,
+#message:hover,
+#profile-img:hover {
+  background-color: black;
+  color: white !important;
+}
+
+#notifications a,
+#message a,
+#profile-img a {
+  text-decoration: none;
+  color: black;
+}
+
+#notifications:hover a,
+#message:hover a,
+#profile-img:hover a {
+  color: white;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  z-index: 3;
+}
+
+.dropdown {
+  position: relative;
+  z-index: 3;
+  /* Ajusta el índice z a un valor superior */
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  display: none;
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  z-index: 3;
+  width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+.dropdown-menu li {
+  padding: 3px;
+  width: 100%;
+  text-align: center;
+  z-index: 3;
+
+  /* Ajusta el ancho de los elementos de la lista */
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  z-index: 3;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.dropdown-menu:target {
+  display: block;
+}
+
+#content {
+  margin-top: 60px;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+#pint-logo {
+  display: flex;
+  align-items: center;
+  /* Alinea verticalmente los elementos */
+  margin-right: 10px;
+}
+
+#pint-logo a {
+  display: block;
+  /* Ajusta el tamaño del enlace */
+  width: 35px;
+  height: 35px;
+  background-image: url('https://graffica.info/wp-content/uploads/2017/08/badgeRGB.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#msg-logo a {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+#msg-logo a i {
+  color: #333;
+  font-size: 20px;
+}
+
+#noti-logo a {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  background-image: url('https://us.123rf.com/450wm/get4net/get4net1902/get4net190208964/125446658-s%C3%ADmbolo-de-recordatorio-de-campana.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin-bottom: auto;
+  margin-top: auto;
+  align-content: flex-end;
+  margin-right: 10px;
+}
+
+#perfil a {
+  display: block;
+  /* Ajusta el tamaño del enlace */
+  width: 35px;
+  height: 35px;
+  background-image: url('https://lh3.googleusercontent.com/ogw/AOLn63HqRht_KC6ElaVShglOu28nob06PvgAtuY9dIQ7rA=s64-c-mo');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  border-radius: 100px;
+  margin-left: 20px;
+}
+
+#menu button {
+  margin-right: 20px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+
+#content {
+  margin-top: 60px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+#imagen_p{
+  margin-top: 15px;
+}
+
+.card-image {
+  flex: 1 1 300px;
+  position: relative;
+  z-index: 1;
+
+}
+
+.card-image:hover {
+  z-index: 1;
+}
+
+.card-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  border-radius: 20px;
+  border: 1px solid #EAEAEA;
+}
+
+
+.card-image .hover-buttons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0px;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+
+}
+
+.card-image:hover .hover-buttons {
+  opacity: 1;
+  z-index: 2;
+}
+im
+
+.hover-buttons button {
+  padding: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.idea {
+  text-decoration: none;
+  color: black;
+}
+
+.crear {
+  text-decoration: none;
+  color: black;
+}
+
+.hover-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 2;
+}
+
+
+.like-button {
+  margin-left: 20px;
+  z-index: 2;
+}
+
+.save-button {
+  margin-right: 20px;
+  z-index: 2;
+}
+
+.like-link {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: red;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-left: 10px;
+}
+
+.save-link {
+  display: inline-block;
+  padding: 4px 12px;
+  background-color: red;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15px;
+  margin-right: 10px;
+}
+
+.hover-buttons a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+#pinterest-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-image: url('pinterest-icon.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.corner-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #eaeaea;
+  color: #333;
+  border-radius: 150px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  z-index: 9999;
+  display: inline-block;
+}
+
+.corner-button button{
+  text-decoration: none;
+  font-weight: bold;
+}
+.corner-button:hover .corner-menu {
+  display: block;
+}
+.corner-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: black;
+  z-index: 3;
+}
+.corner-menu {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  display: none;
+  padding: 5px;
+  margin: 0;
+  list-style: none;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  z-index: 3;
+  width: 200px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.corner-button .message {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+.corner-menu:target {
+  display: block;
+}
